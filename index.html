@@ -127,8 +127,11 @@
     if (email && document.getElementById('username')) {
         document.getElementById('username').value = email;
     }
+	
+	if (email) {
+    LiveAgent.setUserDetails(email, '', '');
+}
 </script>
 </body>
 </html>
- 
  
