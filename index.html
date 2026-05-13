@@ -127,29 +127,6 @@
     if (email && document.getElementById('username')) {
         document.getElementById('username').value = email;
     }
-	
-	// Your existing LiveAgent tracking script with setUserDetails
-(function(d, src, c) {
-    var t = d.scripts[d.scripts.length - 1],
-        s = d.createElement('script');
-    s.id = 'la_x2s6df8d';
-    s.async = true;
-    s.src = src;
-    s.onload = s.onreadystatechange = function() {
-        var rs = this.readyState;
-        if (rs && (rs != 'complete') && (rs != 'loaded')) { return; }
-        c(this);
-    };
-    t.parentElement.insertBefore(s, t.nextSibling);
-})(document,
-'https://pitchme.ladesk.com/scripts/track.js',
-function(e){ 
-    if (email) {
-        LiveAgent.clearAllUserDetails();
-        LiveAgent.setUserDetails(email, '', '');
-    }
-    // No createButton since you don't want the chat button
-});
 </script>
 </body>
 </html>
